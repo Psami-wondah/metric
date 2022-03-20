@@ -5,6 +5,7 @@ import { getMetricData, getMetricDataSuccess } from "../redux/actions/metric";
 
 import Days from "../components/home/Home";
 import { useDispatch } from "react-redux";
+import { setData } from "../redux/reducers/metricSlice";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -82,6 +83,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getMetricData());
+    dispatch(setData(data));
   }, []);
 
   return (

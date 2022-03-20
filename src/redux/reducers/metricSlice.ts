@@ -66,7 +66,6 @@ export const metricSlice = createSlice({
   initialState,
   reducers: {
     [getMetricDataSuccess.type]: (state, action) => {
-      console.log("here");
       const data = action.payload as MetricPayloadState;
       state.errorsLast3Days = data.errors_last_3days as [];
       state.errorsLastHour = data.errors_last_hour as [];
@@ -80,6 +79,14 @@ export const metricSlice = createSlice({
     [fetchingMetricData.type]: (state) => {
       state.status = "loading";
     },
+    setData: (state, action) => {
+      const data = action.payload as MetricPayloadState;
+      state.errorsLast3Days = data.errors_last_3days as [];
+      state.errorsLastHour = data.errors_last_hour as [];
+      state.errorsYesterday = data.errors_yesterday as [];
+      state.data = data.data[0];
+      state.status = "success";
+    },
 
     setActiveTab: (state, action) => {
       state.activeTab = action.payload as ActiveTab;
@@ -87,7 +94,7 @@ export const metricSlice = createSlice({
   },
 });
 
-export const { setActiveTab } = metricSlice.actions;
+export const { setActiveTab, setData } = metricSlice.actions;
 
 // reducer
 // export const metricReducer = metricSlice.reducer;
