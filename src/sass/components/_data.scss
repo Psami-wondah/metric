@@ -1,0 +1,80 @@
+.data {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  margin: 2rem 0;
+  &__grid1 {
+    display: flex;
+    flex-direction: row;
+    &--head {
+      margin-left: 2rem;
+      &-topic {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        &-text {
+          font-weight: 600;
+          font-size: 1.6rem;
+          color: $darkFont;
+        }
+        &-label {
+          font-weight: 600;
+          font-size: 1.2rem;
+          color: white;
+
+          border-radius: 10px;
+          padding: 0 0.4rem;
+          margin-left: 0.8rem;
+        }
+      }
+      &-body1 {
+        font-weight: 400;
+        font-size: 2rem;
+        color: $darkFont;
+        span {
+          font-weight: 400;
+          font-size: 1.2rem;
+        }
+        margin-bottom: 2rem;
+      }
+      &-gray {
+        color: $metricGray;
+      }
+    }
+  }
+  .lemon {
+    background-color: $metricLemon;
+  }
+  .red {
+    background-color: $metricRed;
+  }
+  &__grid2 {
+    &--head {
+      font-size: 1.6rem;
+
+      color: $darkFont;
+      margin-bottom: 0.6rem;
+      &-red {
+        color: $metricRed;
+      }
+    }
+    &--body1 {
+      font-weight: 400;
+      font-size: 1.2;
+      color: $metricGray;
+      margin: 0.6rem 0;
+    }
+    &--body2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+
+      color: $darkFont;
+      a {
+        color: $metricBlue;
+        text-decoration: none;
+        :visited {
+          color: $metricBlue;
+        }
+      }
+    }
+  }
+}

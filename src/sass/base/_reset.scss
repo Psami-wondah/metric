@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 57%;
+  }
+  @include respond(tab-port) {
+    font-size: 52%;
+  }
+  @include respond(phone) {
+    font-size: 47%;
+  }
+  @include respond(small-phone) {
+    font-size: 42%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $backgroundColor;
+  color: $darkFont;
+}

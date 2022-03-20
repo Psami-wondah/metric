@@ -1,0 +1,21 @@
+.reading {
+  font-family: "Open Sans";
+  display: flex;
+
+  &__text {
+    &--top {
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $darkFont;
+    }
+    &--bottom {
+      color: $metricGray;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+  &__dot {
+    margin-right: 0.8rem;
+    padding-top: 0.2rem;
+  }
+}

@@ -1,0 +1,30 @@
+.tab {
+  margin-top: 2.42rem;
+  &__main {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    div {
+      border-top: 1px solid $tabBorder;
+      border-right: 1px solid $tabBorder;
+      border-bottom: 1px solid $tabBorder;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.4rem;
+      color: $darkFont;
+    }
+    &--first {
+      border-left: 1px solid $tabBorder;
+      border-top-left-radius: 0.8rem;
+      border-bottom-left-radius: 0.8rem;
+    }
+    &--last {
+      border-top-right-radius: 0.8rem;
+      border-bottom-right-radius: 0.8rem;
+    }
+  }
+
+  .selected {
+    background-color: $metricBlue;
+    color: white;
+  }
+}

@@ -1,0 +1,38 @@
+.home {
+  background-color: $backgroundColor;
+  padding: 13.7rem 0;
+  &__card {
+    background: #ffffff;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 3.9rem;
+    padding-right: 10rem;
+    width: 74.8rem;
+    margin: auto;
+  }
+  &__header {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+  &__readings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.44rem;
+  }
+  &__data {
+    hr {
+      border-top: 0.01rem solid $metricGray;
+      width: 90%;
+      opacity: 40%;
+    }
+  }
+  &__hr {
+    display: flex;
+    justify-content: end;
+  }
+  .redCTR {
+    color: $metricRed;
+  }
+}
